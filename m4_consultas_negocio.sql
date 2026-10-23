@@ -1,4 +1,4 @@
---CREAR BASE DE DATOS (repetible)
+-- CREAR BASE DE DATOS (repetible)
 IF DB_ID('ventas_tech_DB') IS NULL 
     CREATE DATABASE ventas_tech_DB;
 
