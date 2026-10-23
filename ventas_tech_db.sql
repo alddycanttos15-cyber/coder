@@ -1,5 +1,6 @@
---CREAR BASE DE DATOS
-CREATE DATABASE ventas_tech_DB;
+--CREAR BASE DE DATOS (repetible)
+IF DB_ID('ventas_tech_DB') IS NULL 
+    CREATE DATABASE ventas_tech_DB;
 
 USE ventas_tech_DB;
 
@@ -20,7 +21,7 @@ CREATE TABLE clientes (
     id_cliente INT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
     email VARCHAR(100) UNIQUE,
-    ciudad VARCHAR(50) NOT NULL,
+    ciudad VARCHAR(50),
     fecha_registro DATE NOT NULL
 );
  
